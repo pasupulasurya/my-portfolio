@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Social Media Bar */
+.social-media-bar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100; /* Make sure it appears above other content */
+}
+
+.social-media-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-media-bar a:hover {
+    background-color: #f9cf00; /* Highlight color on hover */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9cf00; /* Highlight color on hover */
+}
+
+/* Hero Section */
+#home {
+    padding: 100px 20px 50px; /* Add top padding to account for fixed header */
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1008eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0419f6;
+}
+
+/* Sections */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    background-color: #ffffff;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f1f1f1;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 350px;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.project-card button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+    background-color: #f9cf00;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a9d8f;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #264653;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .social-media-bar {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer {
+        position: relative;
+    }
+}
