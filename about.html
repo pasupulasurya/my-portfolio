@@ -56,6 +56,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
     .social-media-bar a {
       color: #fff;
@@ -117,6 +118,32 @@
       padding: 15px 0;
       margin-top: 40px;
     }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .about-container {
+        margin: 50px auto 30px;
+        padding: 30px;
+      }
+
+      .about-container h2 {
+        font-size: 2em;
+      }
+
+      .about-container p {
+        font-size: 1em;
+      }
+
+      .skills {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -154,10 +181,10 @@
     <h2>About Me</h2>
     <p>
       I am a passionate and results-driven Computer Science graduate student at Florida Atlantic University, set to graduate in May 2025. I hold a Bachelor's degree in Computer Science from KL University and have a strong foundation in software engineering.
-
-     My experience spans across full-stack development, machine learning, and data analysis. I have worked on multiple projects, including rural network optimization using machine learning and a mobile application built with React Native. I am also proficient in Power BI for data visualization and insights.
-
-     With a keen interest in building scalable and efficient solutions, I am always eager to learn new technologies and collaborate on innovative projects. I am currently seeking software engineering opportunities where I can contribute my skills and grow within a dynamic team.
+      <br /><br />
+      My experience spans across full-stack development, machine learning, and data analysis. I have worked on multiple projects, including rural network optimization using machine learning and a mobile application built with React Native. I am also proficient in Power BI for data visualization and insights.
+      <br /><br />
+      With a keen interest in building scalable and efficient solutions, I am always eager to learn new technologies and collaborate on innovative projects. I am currently seeking software engineering opportunities where I can contribute my skills and grow within a dynamic team.
     </p>
 
     <h3>Skills</h3>
@@ -173,10 +200,11 @@
       <div class="skill-card"><i class="fas fa-mobile-alt"></i> React Native</div>
       <div class="skill-card"><i class="fas fa-cloud"></i> AWS, Cloud Computing</div>
     </div>
-
   </div>
 
   <!-- Optional Footer -->
-  
+  <!-- <footer>
+    <p>© 2025 My Portfolio. All rights reserved.</p>
+  </footer> -->
 </body>
 </html>
