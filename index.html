@@ -107,6 +107,8 @@
       box-shadow: 0 10px 20px rgb(2, 0, 13);
       max-width: 90%;
       margin: auto;
+      /* Default top margin for desktop */
+      margin-top: 80px;
     }
     
     .projects-section, .testimonials-section, .cta-section {
@@ -156,10 +158,11 @@
         margin-bottom: 10px;
       }
       
-      /* Adjust hero section */
+      /* Adjust hero section - add extra top margin so header doesn't cover profile image */
       .hero-content {
         padding: 20px;
         max-width: 95%;
+        margin-top: 140px; /* Increased margin-top for mobile */
       }
       .profile-image {
         width: 120px;
