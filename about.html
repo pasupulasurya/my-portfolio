@@ -20,6 +20,7 @@
     header {
       background: #333;
       padding: 15px 0;
+      width: 100%;
     }
     header nav ul {
       list-style: none;
@@ -48,6 +49,7 @@
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      width: 100%;
     }
     .social-media-bar a {
       color: #fff;
@@ -109,6 +111,16 @@
     }
 
     @media screen and (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .social-media-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
       .about-container {
         padding: 20px;
       }
