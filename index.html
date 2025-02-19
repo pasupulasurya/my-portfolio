@@ -8,16 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    /* Overall Background & Typography */
     body {
+      background: linear-gradient(to right, #2d6566, #bedfe0);
       font-family: 'Poppins', sans-serif;
-      color: #90a6a8;
+      color: #ffffff;
       text-align: center;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       min-height: 100vh;
     }
-    
     .background {
       position: fixed;
       top: 0;
@@ -25,25 +26,16 @@
       right: 0;
       bottom: 0;
       z-index: -1;
-      background: linear-gradient(45deg, #d1d9df, #bdbebe);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
     }
     
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
+    /* Header Styles */
     header {
-      background: rgba(51, 51, 51, 0.8);
+      background: #333;
       padding: 15px 0;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
-      backdrop-filter: blur(10px);
     }
     header nav ul {
       list-style: none;
@@ -61,55 +53,49 @@
       font-size: 1.1em;
     }
     header nav ul li a:hover {
-      color: #8ba8ea;
+      color: #ffdd57;
     }
     
+    /* Hero Section (Updated to match Projects page style) */
+    .hero-content {
+      margin-top: 80px;
+      padding: 40px;
+      background: rgba(166, 203, 207, 0.1);
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-in-out;
+      transition: transform 0.3s;
+      margin-bottom: 40px;
+    }
+    .hero-content:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Profile Image (similar to your previous Home page but scaled for desktop) */
     .profile-image {
       width: 180px;
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 80px auto 20px;
-      box-shadow: 0 4px 8px rgb(10, 10, 10);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transition: transform 0.4s ease;
-      display: block;
     }
     .profile-image:hover {
       transform: scale(1.1);
     }
     
-    .hero-content {
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      display: inline-block;
-      box-shadow: 0 10px 20px rgb(2, 0, 13);
-      max-width: 90%;
-      margin: auto;
-    }
-    
-    .projects-section, .testimonials-section, .cta-section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .projects-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .project-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 300px;
-      text-align: center;
-    }
+    /* Call-to-Action Section */
     .cta-section {
-      background: #3e767e;
-      color: rgba(239, 243, 244, 0.162);
       padding: 50px;
+      background: #3e767e;
       border-radius: 10px;
+      margin: 20px;
     }
     .cta-section a {
       color: #ffc107;
@@ -118,52 +104,41 @@
       font-weight: 600;
     }
     
+    /* Footer */
     footer {
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      text-align: center;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      margin: 20px;
     }
     
-    /* Media Query for Mobile Devices */
+    /* Responsive Styles */
     @media (max-width: 768px) {
-      /* Stack the navigation items vertically */
       header nav ul {
         flex-direction: column;
       }
       header nav ul li {
         margin-bottom: 10px;
       }
-      
-      /* Adjust hero section */
       .hero-content {
         padding: 20px;
-        max-width: 95%;
+        margin-top: 100px;
+        width: 90%;
       }
       .profile-image {
         width: 120px;
         height: 120px;
-        margin: 100px auto 10px;
       }
-      
-      /* Projects grid stacking */
-      .projects-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      /* Adjust section paddings for better mobile spacing */
-      .projects-section, 
-      .testimonials-section, 
       .cta-section {
-        padding: 40px 10px;
+        padding: 30px;
       }
     }
   </style>
 </head>
 <body>
   <div class="background"></div>
-
+  
+  <!-- Header -->
   <header>
     <nav>
       <ul>
@@ -175,45 +150,22 @@
       </ul>
     </nav>
   </header>
-
-  <section id="home" class="section">
-    <div class="hero-content">
-      <img src="images/spasupula2023@fau.edu-2c88e9c4.jpg" alt="Your Name" class="profile-image">
-      <h1>Hey, I'm Pasupula Suryaprakash Reddy</h1>
-      <p>I transform innovative ideas into cutting-edge digital experiences.</p>
-      <button class="btn" onclick="window.location.href='projects.html'">See My Projects</button>
-    </div>
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero-content">
+    <img src="images/spasupula2023@fau.edu-2c88e9c4.jpg" alt="Your Name" class="profile-image">
+    <h1>Hey, I'm Pasupula Suryaprakash Reddy</h1>
+    <p>I transform innovative ideas into cutting-edge digital experiences.</p>
+    <button class="btn" onclick="window.location.href='projects.html'">See My Projects</button>
   </section>
-
-  <section class="projects-section">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Rural Network Analysis</h3>
-        <p>Using ML to optimize connectivity in remote areas.</p>
-      </div>
-      <div class="project-card">
-        <h3>Data Visualization with Power BI</h3>
-        <p>Interactive dashboards for business insights.</p>
-      </div>
-      <div class="project-card">
-        <h3>React Native Mobile App</h3>
-        <p>Cross-platform mobile app for real-time data tracking.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials-section">
-    <h2>What Others Say</h2>
-    <p>"Suryaprakash is a talented and innovative developer who excels in problem-solving." - Professor XYZ</p>
-    <p>"His ability to integrate machine learning in real-world applications is impressive." - Colleague ABC</p>
-  </section>
-
+  
+  <!-- Call-to-Action Section -->
   <section class="cta-section">
     <h2>Let's Work Together</h2>
-    <p> <a href="contact.html">Contact Me</a></p>
+    <p><a href="contact.html">Contact Me</a></p>
   </section>
-
+  
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights reserved.</p>
   </footer>
