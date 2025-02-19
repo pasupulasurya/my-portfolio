@@ -45,6 +45,7 @@
       width: 100%;
       z-index: 10;
       backdrop-filter: blur(10px);
+      transition: transform 0.3s ease; /* Smooth transition for header movement */
     }
     
     header nav ul {
@@ -107,8 +108,8 @@
       box-shadow: 0 10px 20px rgb(2, 0, 13);
       max-width: 90%;
       margin: auto;
-      /* Default top margin for desktop */
-      margin-top: 80px;
+      margin-top: 80px; /* Default top margin for desktop */
+      transition: transform 0.3s ease;
     }
     
     .projects-section, .testimonials-section, .cta-section {
@@ -241,5 +242,23 @@
   <footer>
     <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Scroll Effects -->
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPos = window.scrollY;
+      var header = document.querySelector('header');
+      var profileImg = document.querySelector('.profile-image');
+      
+      // Get header height (limit how far it scrolls up)
+      var headerHeight = header.offsetHeight;
+      // Translate header upward by scroll position (up to header height)
+      var headerTranslate = Math.min(scrollPos, headerHeight);
+      header.style.transform = 'translateY(-' + headerTranslate + 'px)';
+      
+      // Parallax effect for profile image: move it downward by 20% of the scroll value
+      profileImg.style.transform = 'translateY(' + (scrollPos * 0.2) + 'px)';
+    });
+  </script>
 </body>
 </html>
