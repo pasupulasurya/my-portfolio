@@ -141,65 +141,91 @@
       padding: 15px 0;
       margin-top: 40px;
     }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .contact-form,
+      .contact-info {
+        min-width: 100%;
+        margin-bottom: 20px;
+      }
+      header nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      header nav ul li {
+        margin-bottom: 10px;
+      }
+      .social-media-bar {
+        flex-direction: column;
+      }
+      .social-media-bar a {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
-    <!-- Unified Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Unified Header -->
+  <header>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <!-- Unified Social Media Bar -->
-    <div class="social-media-bar">
-        <a href="https://www.linkedin.com/in/suryaprakash-reddy-pasupula-712338213/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.youtube.com" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://github.com" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-    </div>
+  <!-- Unified Social Media Bar -->
+  <div class="social-media-bar">
+      <a href="https://www.linkedin.com/in/suryaprakash-reddy-pasupula-712338213/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://github.com" target="_blank">
+          <i class="fab fa-github"></i>
+      </a>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-container">
-            <div class="contact-form">
-                <h2>Contact Me</h2>
-                <p>I'd love to hear from you! Please fill out the form below.</p>
-                <form action="#" method="post">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Address: Your Address Here</p>
-                <div id="map">
-                    <!-- Embed your map here if needed -->
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+      <div class="contact-container">
+          <div class="contact-form">
+              <h2>Contact Me</h2>
+              <p>I'd love to hear from you! Please fill out the form below.</p>
+              <form action="#" method="post">
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  <textarea placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+              </form>
+          </div>
+          <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Address: Your Address Here</p>
+              <div id="map">
+                  <!-- Embed your map here if needed -->
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <footer>
-        <p>© 2025 Suryaprakash Reddy. All rights reserved.</p>
-    </footer>
+  <footer>
+      <p>© 2025 Suryaprakash Reddy. All rights reserved.</p>
+  </footer>
 </body>
 </html>
