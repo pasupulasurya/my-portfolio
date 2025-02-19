@@ -117,6 +117,48 @@
       font-size: 1.2em;
       font-weight: 600;
     }
+    
+    footer {
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+    }
+    
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      /* Stack the navigation items vertically */
+      header nav ul {
+        flex-direction: column;
+      }
+      header nav ul li {
+        margin-bottom: 10px;
+      }
+      
+      /* Adjust hero section */
+      .hero-content {
+        padding: 20px;
+        max-width: 95%;
+      }
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        margin: 100px auto 10px;
+      }
+      
+      /* Projects grid stacking */
+      .projects-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Adjust section paddings for better mobile spacing */
+      .projects-section, 
+      .testimonials-section, 
+      .cta-section {
+        padding: 40px 10px;
+      }
+    }
   </style>
 </head>
 <body>
