@@ -42,24 +42,6 @@
       color: #ffdd57;
     }
 
-    .social-media-bar {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-    .social-media-bar a {
-      color: #fff;
-      font-size: 1.5em;
-      transition: transform 0.8s;
-    }
-    .social-media-bar a:hover {
-      transform: scale(1.2);
-    }
-
     .about-container {
       max-width: 90%;
       margin: 80px auto 50px;
@@ -110,6 +92,25 @@
       margin-top: 40px;
     }
 
+    .social-media-bar {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .social-media-bar a {
+      color: #fff;
+      font-size: 1.5em;
+      transition: transform 0.8s;
+    }
+    .social-media-bar a:hover {
+      transform: scale(1.2);
+    }
+
     @media screen and (max-width: 768px) {
       header nav ul {
         flex-direction: column;
@@ -117,8 +118,8 @@
         gap: 10px;
       }
       .social-media-bar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
         gap: 10px;
       }
       .about-container {
@@ -129,6 +130,9 @@
       }
       .about-container p {
         font-size: 0.95rem;
+      }
+      .social-media-bar a {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -145,21 +149,6 @@
       </ul>
     </nav>
   </header>
-
-  <div class="social-media-bar">
-    <a href="https://www.linkedin.com/in/suryaprakash-reddy-pasupula-712338213/" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://twitter.com" target="_blank">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.youtube.com" target="_blank">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://github.com" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
 
   <div class="about-container">
     <h2>About Me</h2>
@@ -180,5 +169,25 @@
       <div class="skill-card"><i class="fas fa-cloud"></i> AWS, Cloud Computing</div>
     </div>
   </div>
+
+  <!-- Social Media Bar Moved Here -->
+  <div class="social-media-bar">
+    <a href="https://www.linkedin.com/in/suryaprakash-reddy-pasupula-712338213/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://github.com" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
 </body>
 </html>
