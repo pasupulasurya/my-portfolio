@@ -4,39 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    /* Basic Styles */
     body {
       font-family: 'Poppins', sans-serif;
-      color: #90a6a8;
-      text-align: center;
+      color: #90a6a8; /* Slightly darker text color for better contrast */
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       min-height: 100vh;
-    }
-    
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      background: linear-gradient(45deg, #42596b, #546b6b);
+      background: linear-gradient(45deg, #42596b, #546b6b); /* Background on body */
       background-size: 400% 400%;
       animation: gradientAnimation 15s ease infinite;
     }
-    
+
     @keyframes gradientAnimation {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
-    /* Updated Header Styles */
+
+    /* Header */
     header {
       background: rgba(51, 51, 51, 0.8);
       padding: 15px 0;
@@ -45,10 +35,10 @@
       width: 100%;
       z-index: 10;
       backdrop-filter: blur(10px);
-      transition: transform 0.3s ease; /* Smooth transition for header movement */
+      transition: transform 0.3s ease;
     }
-    
-    header nav ul {
+
+    nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
@@ -56,139 +46,127 @@
       margin: 0;
       padding: 0;
     }
-    
-    header nav ul li a {
+
+    nav li a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
       font-size: 1.1em;
     }
-    
-    header nav ul li a:hover {
+
+    nav li a:hover {
       color: #8ba8ea;
     }
-    
-    /* Responsive Header for Mobile Devices */
-    @media (max-width: 768px) {
-      header {
-        padding: 10px 0;
-      }
-      header nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      header nav ul li {
-        margin: 5px 0;
-      }
-      header nav ul li a {
-        font-size: 1em;
-      }
+
+    /* Hero Section */
+    #home {
+      padding-top: 100px; /* Space for fixed header */
+      display: flex;
+      flex-direction: column; /* Align items vertically */
+      align-items: center; /* Center horizontally */
+      min-height: calc(100vh - 80px); /* Ensure full viewport height minus footer */
+      justify-content: center; /* Center vertically */
     }
-    
+
+    .hero-content {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgb(2, 0, 13);
+      text-align: center; /* Center text within hero content */
+      max-width: 90%; /* Occupy most of the screen width */
+    }
+
     .profile-image {
       width: 180px;
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 80px auto 20px;
+      margin-bottom: 20px; /* Space below image */
       box-shadow: 0 4px 8px rgb(10, 10, 10);
       transition: transform 0.4s ease;
       display: block;
     }
+
     .profile-image:hover {
       transform: scale(1.1);
     }
-    
-    .hero-content {
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      display: inline-block;
-      box-shadow: 0 10px 20px rgb(2, 0, 13);
-      max-width: 90%;
-      margin: auto;
-      margin-top: 80px; /* Default top margin for desktop */
-      transition: transform 0.3s ease;
+
+    .hero-content h1 {
+        margin-bottom: 10px; /* Space below heading */
     }
-    
+
+    /* Other Sections */
     .projects-section, .testimonials-section, .cta-section {
       padding: 60px 20px;
       text-align: center;
     }
+
     .projects-grid {
-      display: flex;
-      justify-content: center;
+      display: grid; /* Use grid for layout */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
       gap: 20px;
-      flex-wrap: wrap;
     }
+
     .project-card {
       background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       border-radius: 10px;
-      max-width: 300px;
       text-align: center;
     }
+
     .cta-section {
       background: #3e767e;
       color: rgba(239, 243, 244, 0.162);
       padding: 50px;
       border-radius: 10px;
     }
+
     .cta-section a {
       color: #ffc107;
       text-decoration: none;
       font-size: 1.2em;
       font-weight: 600;
     }
-    
+
     footer {
       padding: 20px;
       background: #333;
       color: #fff;
       text-align: center;
     }
-    
-    /* Media Query for Mobile Devices */
+
+    /* Media Queries */
     @media (max-width: 768px) {
-      /* Stack the navigation items vertically */
-      header nav ul {
-        flex-direction: column;
-      }
-      header nav ul li {
-        margin-bottom: 10px;
-      }
-      
-      /* Adjust hero section - add extra top margin so header doesn't cover profile image */
-      .hero-content {
-        padding: 20px;
-        max-width: 95%;
-        margin-top: 160px; /* Increased margin-top for mobile */
-      }
-      .profile-image {
-        width: 120px;
-        height: 120px;
-        margin: 20px auto 10px; /* Adjusted margin for better spacing */
-      }
-      
-      /* Projects grid stacking */
-      .projects-grid {
+      nav ul {
         flex-direction: column;
         align-items: center;
       }
-      
-      /* Adjust section paddings for better mobile spacing */
-      .projects-section, 
-      .testimonials-section, 
-      .cta-section {
+
+      nav li {
+        margin-bottom: 10px;
+      }
+
+      #home {
+        padding-top: 160px; /* Increased top padding for mobile */
+      }
+      .hero-content {
+        padding: 20px;
+      }
+
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+
+      .projects-section, .testimonials-section, .cta-section {
         padding: 40px 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="background"></div>
-
   <header>
     <nav>
       <ul>
@@ -201,7 +179,7 @@
     </nav>
   </header>
 
-  <section id="home" class="section">
+  <section id="home">
     <div class="hero-content">
       <img src="images/spasupula2023@fau.edu-2c88e9c4.jpg" alt="Your Name" class="profile-image">
       <h1>Hey, I'm Pasupula Suryaprakash Reddy</h1>
@@ -240,25 +218,4 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript for Scroll Effects -->
-  <script>
-    window.addEventListener('scroll', function() {
-      var scrollPos = window.scrollY;
-      var header = document.querySelector('header');
-      var profileImg = document.querySelector('.profile-image');
-      
-      // Get header height (limit how far it scrolls up)
-      var headerHeight = header.offsetHeight;
-      // Translate header upward by scroll position (up to header height)
-      var headerTranslate = Math.min(scrollPos, headerHeight);
-      header.style.transform = 'translateY(-' + headerTranslate + 'px)';
-      
-      // Parallax effect for profile image: move it downward by 20% of the scroll value
-      profileImg.style.transform = 'translateY(' + (scrollPos * 0.2) + 'px)';
-    });
-  </script>
-</body>
-</html>
+    <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights
