@@ -94,7 +94,7 @@
     }
 
     .hero-content h1 {
-        margin-bottom: 10px; /* Space below heading */
+      margin-bottom: 10px; /* Space below heading */
     }
 
     /* Other Sections */
@@ -137,8 +137,9 @@
       text-align: center;
     }
 
-    /* Media Queries */
+    /* Mobile First Design for Small Devices */
     @media (max-width: 768px) {
+      /* Header and Navigation */
       nav ul {
         flex-direction: column;
         align-items: center;
@@ -148,9 +149,11 @@
         margin-bottom: 10px;
       }
 
+      /* Hero Section */
       #home {
         padding-top: 160px; /* Increased top padding for mobile */
       }
+
       .hero-content {
         padding: 20px;
       }
@@ -160,8 +163,32 @@
         height: 150px;
       }
 
-      .projects-section, .testimonials-section, .cta-section {
+      /* Projects Section */
+      .projects-section {
         padding: 40px 10px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+      }
+
+      .cta-section {
+        padding: 40px;
+      }
+
+      .cta-section a {
+        font-size: 1.1em; /* Slightly smaller font for mobile */
+      }
+
+      .project-card {
+        padding: 15px;
+      }
+
+      /* Buttons */
+      .btn {
+        width: 100%; /* Full-width buttons on mobile */
+        padding: 15px;
+        font-size: 1.1em;
       }
     }
   </style>
@@ -218,4 +245,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights
+    <p>&copy; 2025 Pasupula Suryaprakash Reddy | All rights reserved</p>
+  </footer>
+</body>
+</html>
